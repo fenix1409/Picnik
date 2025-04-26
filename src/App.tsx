@@ -6,6 +6,7 @@ import Hero from './components/ui/sections/Hero'
 // import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Categories from './components/ui/sections/Categories';
+import Faq from './components/ui/sections/Faq';
 // AOS.init();
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <HeaderBottom />
       <Hero />
       <Categories />
+      <Faq />
     </main>
   )
 }

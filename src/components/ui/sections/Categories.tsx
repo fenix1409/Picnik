@@ -29,7 +29,7 @@ const Categories = () => {
   })
 
   return (
-    <section className="px-[100px]">
+    <section className="px-[100px] mb-[57px]">
       <div className="text-center mx-auto">
         <h1 className="text-[50px] leading-[100%] font-bold mb-[70px]">Kategoriya va Mahsulotlar</h1>
       </div>
@@ -42,8 +42,8 @@ const Categories = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-start flex-wrap gap-[20px] mt-[70px]">
-        {isLoading && <div className="w-[50px] h-[50px]"><ClipLoader /></div>}
+      <div className="flex items-center justify-center flex-wrap gap-[20px] mt-[70px]">
+        {isLoading && <div className="w-[50px] h-[50px] mx-auto"><ClipLoader /></div>}
         {isError && <p>Xatolik yuz berdi</p>}
         {!isLoading && products.length > 0 &&
           products.map((item: Product) => (
