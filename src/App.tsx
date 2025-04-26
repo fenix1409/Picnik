@@ -7,6 +7,7 @@ import Hero from './components/ui/sections/Hero'
 import 'aos/dist/aos.css';
 import Categories from './components/ui/sections/Categories';
 import Faq from './components/ui/sections/Faq';
+import Clients from './components/ui/sections/Clients';
 // AOS.init();
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Hero />
       <Categories />
       <Faq />
+      <Clients />
     </main>
   )
 }
