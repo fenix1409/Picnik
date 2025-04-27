@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import Categories from './components/ui/sections/Categories';
 import Faq from './components/ui/sections/Faq';
 import Clients from './components/ui/sections/Clients';
+import Footer from './components/ui/sections/Footer';
 // AOS.init();
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Categories />
       <Faq />
       <Clients />
+      <Footer />
     </main>
   )
 }
