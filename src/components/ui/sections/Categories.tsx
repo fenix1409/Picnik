@@ -8,10 +8,12 @@ import { getProductsByCategory } from "../../service/getProductsByCategory"
 import { ClipLoader } from "react-spinners"
 import Stars from '../../../assets/images/star.svg'
 import { Basket1 } from "../../../assets/Icons"
+import { useNavigate } from "react-router-dom"
 
 const Categories = () => {
   const categories = useGetCategory()
   const [activeIndex, setActiveIndex] = useState<string | null>(null)
+  const navigate = useNavigate()
 
   const handleClick = useCallback((id: string) => {
     setActiveIndex(id)
@@ -49,7 +51,7 @@ const Categories = () => {
           products.map((item: Product) => (
             <div key={item.id} className="w-[295px]">
               <div className="w-[295px] h-[298px] bg-[#E9F8EC] rounded-[20px] mb-[17px]">
-                <img src={`${IMAGE_API}/${item.image_src}`} alt="image" width={200} height={200} className="mx-auto pt-[44px]" />
+                <img onClick={() => navigate(`/single-product/${item.id}`)} src={`${IMAGE_API}/${item.image_src}`} alt="image" width={200} height={200} className="mx-auto pt-[44px]" />
               </div>
               <h2 className="text-[20px] leading-[100%] font-bold mb-[10px]">{item.title}</h2>
               <img src={Stars} alt="stars" width={150} height={19} className="mb-[8px]" />

@@ -1,14 +1,11 @@
 // import { useEffect } from 'react';
 import './App.css'
-import Header from './components/ui/sections/Header'
 import HeaderBottom from './components/ui/sections/HeaderBottom'
-import Hero from './components/ui/sections/Hero'
 // import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Categories from './components/ui/sections/Categories';
-import Faq from './components/ui/sections/Faq';
-import Clients from './components/ui/sections/Clients';
 import Footer from './components/ui/sections/Footer';
+import DashboardRoutes from './routes';
+import { Header } from 'antd/es/layout/layout';
 // AOS.init();
 
 function App() {
@@ -20,10 +17,7 @@ function App() {
     <main>
       <Header />
       <HeaderBottom />
-      <Hero />
-      <Categories />
-      <Faq />
-      <Clients />
+      <DashboardRoutes />
       <Footer />
     </main>
   )
