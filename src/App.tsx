@@ -5,7 +5,7 @@ import HeaderBottom from './components/ui/sections/HeaderBottom'
 import 'aos/dist/aos.css';
 import Footer from './components/ui/sections/Footer';
 import DashboardRoutes from './routes';
-import { Header } from 'antd/es/layout/layout';
+import Header from './components/ui/sections/Header';
 // AOS.init();
 
 function App() {
