@@ -4,7 +4,7 @@ import { instance } from "../hooks/useAxios"
 const getSinglePRoduct = (id: string | undefined) => {
     const { data, isLoading } = useQuery({
         queryKey: ['singleProduct', id],
-        queryFn: () => instance().get(`/products/${id}`).then(res => res.data.data)
+        queryFn: async () => (await instance().get(`/products/${id}`)).data.data
     })
     return { data, isLoading }
 }
