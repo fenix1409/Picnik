@@ -88,3 +88,11 @@ export function GitHub() {
         </svg>
     )
 }
+export function Arrow() {
+    return (
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.6665 16.9997H28.3331" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M12.7496 24.0833C12.7496 24.0833 10.7667 22.1 5.66626 17C10.2001 12.4667 12.7496 9.91667 12.7496 9.91667" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
