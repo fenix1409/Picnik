@@ -1,30 +1,29 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ProductState {
-  count: number
+  counts: { [key: string]: number };
 }
 
 const initialState: ProductState = {
-  count: 1,
-}
+  counts: {},
+};
 
 const productSlice = createSlice({
   name: "product",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.count += 1
+    increment: (state, action: PayloadAction<string>) => {
+      const id = action.payload;
+      state.counts[id] = (state.counts[id] || 1) + 1;
     },
-    decrement: (state) => {
-      if (state.count > 1) {
-        state.count -= 1
+    decrement: (state, action: PayloadAction<string>) => {
+      const id = action.payload;
+      if ((state.counts[id] || 1) > 1) {
+        state.counts[id] -= 1;
       }
     },
-    setCount: (state, action: PayloadAction<number>) => {
-      state.count = action.payload
-    }
-  }
-})
+  },
+});
 
-export const { increment, decrement, setCount } = productSlice.actions
-export default productSlice.reducer
+export const { increment, decrement } = productSlice.actions;
+export default productSlice.reducer;
